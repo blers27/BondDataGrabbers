@@ -3,6 +3,7 @@ import datetime
 import argparse
 from time import sleep
 
+
 def cmdParser():
     parser = argparse.ArgumentParser(prog='Refinitiv Downloader', description='Program to download Refinitiv extractions')
     
@@ -124,12 +125,9 @@ class Refinitiv:
 
 
 if __name__ == '__main__':
-
-    #'NorthAmericaBonds', 'History', 'test.csv'
+    # example: 'NorthAmericaBonds', 'History', 'test.csv'
     instr, report, filename = cmdParser()
     
-    #instr, report, filename = 'Forward END_FWD fwd.csv'.split()
-    #instr, report, filename = 'NorthAmericaBonds History nbonds.csv'.split()
-    
-    
+    # example: instr, report, filename = 'Forward END_FWD fwd.csv'.split()
+    # example: instr, report, filename = 'NorthAmericaBonds History nbonds.csv'.split()
     Refinitiv(instr, report, filename)
